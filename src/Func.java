@@ -74,10 +74,11 @@ public class Func {
         BinaryOperator  <Integer> add2Nmubers       = (a, b) -> a + b;
         Predicate       <Integer> p_isGreaterThan3  = e->e > 3;//e->isGt(3);
         Predicate       <Integer> p_isEven          = Func::isEven;
-        Supplier        <String> supplierStr  = ()-> "java2s.com";
+        Supplier        <String> supplierStr  = ()-> "supplier.get()=java2s.com";
+
+
         System.out.println(supplierStr.get());
-        Consumer        <Integer> consumerSysout    = (y) -> {
-                                                                System.out.println("x = " + x); // Statement A
+        Consumer        <Integer> consumerSysout    = (y) -> {  System.out.println("x = " + x); // Statement A
                                                                 System.out.println("y = " + y);
                                                             };
         consumerSysout.accept(x);
